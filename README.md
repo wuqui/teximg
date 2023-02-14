@@ -17,7 +17,7 @@ This is a Quarto filter that allows you to use LaTeX code in your Quarto documen
 
 # Functionality
 
-Here is a diagram using the `LaTeX`’s `forest` library:
+Here is a diagram using the LaTeX’s `forest` library:
 
 ````md
 ```{=tex}
