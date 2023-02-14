@@ -3,8 +3,16 @@ This is a Quarto filter that allows you to use LaTeX code in your Quarto documen
 
 # Requirements and configuration
 
-- pdf2svg
-- Use a preamble.sty file in your quarto folder to specify your LaTeX requirements.
+- `pdf2svg` is required
+- install this filter using: `quarto add wuqui/teximg`
+- activate it using
+
+    ```yml
+    filters:
+      treesclean
+    ```
+
+- if you have any LaTeX requirements, add them to a `preamble.sty` file in your quarto folder
 
 
 # Example
@@ -20,13 +28,13 @@ Here is a diagram using the LaTeX forest library:
 \end{forest}
 ```
 
-When rendering to PDF, this filter leaves the raw LaTeX.
+When rendering to PDF via LaTeX, this filter passes the code on to the LaTeX process.
 
-When rendering to other formats, the filter
+When rendering to other formats, the filter:
 
 - produces a standalone PDF of this block,
 - converts it to SVG using pdf2svg,
-- inserts this image in the output file
+- inserts this image in the output file.
 
 
 # Features
