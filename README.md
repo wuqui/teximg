@@ -19,7 +19,7 @@ This is a Quarto filter that allows you to use LaTeX code in your Quarto documen
 
 Here is a diagram using the `LaTeX`’s `forest` library:
 
-``````
+````md
 ```{=tex}
 \begin{forest}
   [one
@@ -28,7 +28,7 @@ Here is a diagram using the `LaTeX`’s `forest` library:
   ]
 \end{forest}
 ```
-`````
+````
 
 When rendering to PDF via LaTeX, this filter passes the code on to the LaTeX process.
 
