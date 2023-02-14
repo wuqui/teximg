@@ -1,23 +1,26 @@
-# Teximg Extension For Quarto
+# Requirements and configuration
 
-_TODO_: Add a short description of your extension.
+- `pdf2svg`
+- Use a `preamble.sty` file in your quarto folder to specify your LaTeX requirements.
 
-## Installing
 
-_TODO_: Replace the `<github-organization>` with your GitHub organization.
+# Example
 
-```bash
-quarto add <github-organization>/teximg
+Here is a diagram using the `LaTeX` `forest` library:
+
+```{=tex}
+\begin{forest}
+  [one
+    [two]
+    [three]
+  ]
+\end{forest}
 ```
 
-This will install the extension under the `_extensions` subdirectory.
-If you're using version control, you will want to check in this directory.
+When rendering to `pdf`, this filter leaves the raw LaTeX.
 
-## Using
+When rendering to other formats, the filter
 
-_TODO_: Describe how to use your extension.
-
-## Example
-
-Here is the source code for a minimal example: [example.qmd](example.qmd).
-
+- produces a standalone `pdf` of this block,
+- converts it to `svg` using `pdf2svg`,
+- inserts this image in the output file
