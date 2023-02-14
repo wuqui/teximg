@@ -9,7 +9,7 @@ This is a Quarto filter that allows you to use LaTeX code in your Quarto documen
 
     ```yml
     filters:
-      treesclean
+      teximg
     ```
 
 - if you have any LaTeX requirements, add them to a `preamble.sty` file in your quarto folder
